@@ -8,8 +8,9 @@
         <table>
             {% for blog in blogs %}
             <tr>
-                <td><a href="/blog?id={{ blog.id }}"><b>{{blog.title}}</b></a><br>
-                {{blog.body}}<hr></td>
+                <td><a href="/blog?id={{ blog.id }}"><b>{{ blog.title }}</b></a><br>
+                {{blog.body}}<br>
+                <p>written by <a href='/blog?user={{ blog.owner.id }}'>{{ blog.owner.username }}</a></p><hr></td>
             </tr>
             {% endfor %}
         </table>
